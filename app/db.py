@@ -61,7 +61,7 @@ def create_schema():
         print("DB schema created")
 
         cur.execute("""
-            DROP VIEW bookings_view; 
+            DROP VIEW IF EXISTS bookings_view; 
             CREATE VIEW bookings_view AS
                 SELECT 
                     r.room_number,
